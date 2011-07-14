@@ -14,6 +14,8 @@ import atom
 import gdata.contacts.data
 import gdata.contacts.client
 import gdata.gauth
+import os
+from google.appengine.ext.webapp import template
 
 def GetAuthSubUrl():
     nnext = 'http://contactssharing.appspot.com/list'
@@ -27,9 +29,12 @@ class MainHandler(webapp.RequestHandler):
         #        print '<a href="%s">Login to your Google account</a>' % GetAuthSubUrl()
         user = users.get_current_user()
         if user:
-            self.response.headers['Content-Type'] = 'text/html'
-            self.response.out.write('Hello, ' + user.nickname() + '<br>')
-            self.response.out.write('<a href="%s">Login to your Google account</a>' % GetAuthSubUrl())
+            #self.response.headers['Content-Type'] = 'text/html'
+            #self.response.out.write('Hello, ' + user.nickname() + '<br>')
+            #self.response.out.write('<a href="%s">Login to your Google account</a>' % GetAuthSubUrl())
+            template_values = {'username': user.nickname(),'url': GetAuthSubUrl()}
+            path = os.path.join(os.path.dirname(__file__), 'index.html')
+            self.response.out.write(template.render(path, template_values))
         else:
             self.redirect(users.create_login_url(self.request.uri))
 
@@ -72,7 +77,7 @@ class ListHandler(webapp.RequestHandler):
         gd_client = gdata.contacts.client.ContactsClient(auth_token=auth_token, source='test contactssharing')
         self.response.headers['Content-Type'] = 'text/html'
         query = gdata.contacts.client.ContactsQuery()
-        query.max_results = 1000
+        query.max_results = 2000
         self.response.out.write(PrintFeed(gd_client.GetContacts(q=query)))
 
 def main():
