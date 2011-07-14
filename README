@@ -1,0 +1,8 @@
+﻿atom/ and gdata/ are distributed with the google data API:
+https://code.google.com/intl/fr/apis/gdata/
+
+other source and folders:
+- Copyright Elsa Prieto and Gabriel Synnaeve 2011
+- *.py: Python 2 open source license 
+  http://www.python.org/download/releases/2.0.1/license/
+
