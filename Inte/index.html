@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US">
+	<head>
+		<title>Carnet! Manage and share your Google Contacts</title>
+		<link rel="stylesheet" type="text/css" media="all" href="fonts.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="googleContactsApi.js"></script>
+		<script type="text/javascript" src="preload.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+	</head>
+	<body>
+	<img src="cuisine.jpg" style="display:none;"/>
+        <div id="header">
+            <div id="logo"></div>
+            <p id="infoUser"></p>
+            <div id="log"></div>
+        </div>
+	   
+	   <div id="content">
+	       <div id="btns">
+	           <div id="btnCreate"></div>
+	           <div id="btnShare"></div>
+	           <div class="clearer"></div>
+	       </div>
+	       <div id="search">
+	           <form action="javascript:search(document.getElementById('searchBar').value);">
+	               <div id="topSearchBar"></div>
+	               <input id="searchBar" type="text" />
+	               <div id="btnSearch" onclick="search(document.getElementById('searchBar').value)"><img id="loupe" src="img/loupe.png" /><img id="loader" style="display:none" src="img/loader.gif" /></div>
+	           </form>
+	       </div>
+	       <div class="clearer"></div>
+	       <p id="ariane">Search Results</p>
+	       <div id="dynamicContent">
+	       <div class="contactSmall">
+	               <a href="http://google.com"></a>
+	               <div class="photo"></div>
+	               <h3 class="name">Jean-Charles Bouillet</h3>
+	               <p class="email">elsa.prieto.m@gmail.com</p>
+	               <p class="tel">+33 671 513 912</p>
+	           </div>
+	           <div class="contactSmall">
+	               <div class="photo"></div>
+	               <h3 class="name">Jean-Charles Bouillet</h3>
+	               <p class="email">elsa.prieto.m@gmail.com</p>
+	               <p class="tel">+33 671 513 912</p>
+	           </div>
+	           <div class="contactSmall">
+	               <div class="photo"></div>
+	               <h3 class="name">Jean-Charles Bouillet</h3>
+	               <p class="email">elsa.prieto.m@gmail.com</p>
+	               <p class="tel">+33 671 513 912</p>
+	           </div>
+	           <div class="contactSmall">
+	               <div class="photo"></div>
+	               <h3 class="name">Jean-Charles Bouillet</h3>
+	               <p class="email">elsa.prieto.m@gmail.com</p>
+	               <p class="tel">+33 671 513 912</p>
+	           </div>
+
+	       </div>
+	   </div>
+	</body>
+</html>

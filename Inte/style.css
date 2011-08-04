@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Panefresco1wtRegular';
+    letter-spacing: -60;
+    font-size: 16px;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+body{
+    background-image: url(img/bg.png);
+}
+
+.clearer{
+    clear: both;
+}
+
+#header{
+    height: 162px;
+    background-image: url(img/bgHeader.png);
+}
+
+#header #logo{
+    float: left;
+    width: 395px;
+    height: 162px;
+    position: relative;
+    left: 20px;
+    background-image: url(img/logo.png);
+}
+
+#header #log{
+    float: left;
+    width: 120px;
+    height: 42px;
+    position: absolute;
+    right: 10px;
+    top: 65px;
+}
+
+#header #infoUser{
+    float: left;
+    position: absolute;
+    right: 10px;
+    font-size: 14px;
+    color: #777777;
+    display: none;
+}
+
+#header .login{
+    background-image: url(img/btnLoginOff.png);
+}
+
+#header .login:hover{
+    cursor: pointer;
+    background-image: url(img/btnLoginOn.png);
+}
+
+#header .logout{
+    background-image: url(img/btnLogoutOff.png);
+}
+
+#header .logout:hover{
+    cursor: pointer;
+    background-image: url(img/btnLogoutOn.png);
+}
+
+#content{
+    width: 780px;
+    min-height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+#search #searchBar{
+    background-image: url(img/bgSearch.png);
+    background-repeat: no-repeat;
+    border: none;
+    height: 54px;
+    width: 687px;
+    float: left;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+
+#btnSearch #loupe{
+    position: relative;
+    top: 3px;
+    left: 26px;
+}
+
+#btnSearch #loader{
+    position: relative;
+    top: 2px;
+    left: -10px;
+}
+
+#ariane, #ariane a{
+   font-family: 'MarketingScriptRegular';
+   text-decoration: none;
+   color: #6d6d6d;
+   font-size: 35px;
+}
+
+#ariane{
+    position: relative;
+    left: 45px;
+    top: 30px;
+}
+
+#search #btnSearch{
+    background-image: url(img/btnSearchOff.png);
+    height: 47px;
+    width: 92px;
+    float: left;
+    margin-left: -94px;
+    position: relative;
+    top: 4px;
+}
+
+#search #btnSearch:hover{
+    cursor: pointer;
+    background-image: url(img/btnSearchOn.png);
+}
+
+#btns{
+    width: 720px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+#btns #btnShare, #btns #btnCreate{
+    width: 347px;
+    height: 100px;
+    float: left;
+}
+
+#btnShare{background-image: url(img/btnShareOff.png);}
+#btnShare:hover{background-image: url(img/btnShareOn.png);cursor: pointer;}
+#btnCreate{background-image: url(img/btnCreateOff.png); margin-right: 20px;}
+#btnCreate:hover{background-image: url(img/btnCreateOn.png);cursor: pointer;}
+
+#dynamicContent{
+    width: 716px;
+    margin: 30px auto;
+}
+
+.contactSmall{
+    width: 347px;
+    height: 113px;
+    float: left;
+    background-image: url(img/contacts/bgContactSmallOff.png);
+    background-repeat: no-repeat;
+    margin: 0 8px 8px 3px;
+}
+
+.contactSmall:hover{
+    cursor: pointer;
+    background-image: url(img/contacts/bgContactSmallOn.png);
+}
+
+.contactSmall .photo{
+    width: 67px;
+    height: 98px;
+    background-color: black;
+    float: left;
+    position: relative;
+    top: 8px;
+    left: 5px;
+    margin: 0 15px 0 0;
+}
+
+.contactSmall .name{
+    font-family: 'Panefresco400wtRegular';
+    font-size: 24px;
+    position: relative;
+    top: 18px;
+}
+
+.contactSmall .email{
+    position: relative;
+    top: 30px;
+}
+
+.contactSmall .tel{
+    position: relative;
+    top: 33px;
+}
+
+.noResult{
+    width: 722px;
+    text-align: center;
+    font-size: 22px;
+}
